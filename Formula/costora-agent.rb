@@ -1,14 +1,14 @@
 class CostoraAgent < Formula
   desc "Metadata-only Costora local agent for PR cost receipts"
   homepage "https://github.com/costora"
-  url "https://github.com/0dust/homebrew-costora/releases/download/v0.1.1/costora-agent-release.tar.gz"
-  sha256 "eb0c7e2005dfb18fb5b2daeba6ba381f6770749d24c5a4eb2a6110baeb601072"
-  version "0.1.1"
+  url "https://github.com/0dust/homebrew-costora/releases/download/v0.1.2/costora-agent-release.tar.gz"
+  sha256 "4a55d1d2534d410c3faf26770f5bd00241b1ef84664e3ce61b4df04513bc74b0"
+  version "0.1.2"
 
   depends_on :macos
 
   def install
-    artifact = Hardware::CPU.intel? ? "pr-cost-agent_darwin_amd64" : "pr-cost-agent_darwin_arm64"
+    artifact = Hardware::CPU.intel? ? "costora-agent_darwin_amd64" : "costora-agent_darwin_arm64"
     bin.install artifact => "costora-agent"
   end
 
