@@ -1,9 +1,9 @@
 class CostoraAgent < Formula
   desc "Metadata-only Costora local agent for PR cost receipts"
   homepage "https://github.com/costora"
-  url "https://github.com/0dust/homebrew-costora/releases/download/v0.1.4-dev.20260606.1/costora-agent-release.tar.gz"
-  sha256 "24d7833d77bab86df25aa2be025558f500f692e8f4d45dfcd0ed6eacaf2296a3"
-  version "0.1.4-dev.20260606.1"
+  url "https://github.com/0dust/homebrew-costora/releases/download/v0.1.4-dev.20260607/costora-agent-release.tar.gz"
+  sha256 "bc36c2c6387bdecb7f84377b1e4865ab2ef98326f00aee449bca0ad28a1388fe"
+  version "0.1.4-dev.20260607"
 
   depends_on :macos
 
