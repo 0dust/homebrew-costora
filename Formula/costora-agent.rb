@@ -8,7 +8,8 @@ class CostoraAgent < Formula
   depends_on :macos
 
   def install
-    artifact = Hardware::CPU.intel? ? "costora-agent_darwin_amd64" : "costora-agent_darwin_arm64"
+    apple_silicon_hardware = Utils.safe_popen_read("/usr/sbin/sysctl", "-n", "hw.optional.arm64").strip == "1"
+    artifact = apple_silicon_hardware ? "costora-agent_darwin_arm64" : "costora-agent_darwin_amd64"
     bin.install artifact => "costora-agent"
   end
 
